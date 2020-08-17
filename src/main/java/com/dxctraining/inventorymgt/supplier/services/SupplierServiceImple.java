@@ -14,6 +14,7 @@ public class SupplierServiceImple implements ISupplierService {
     private ISupplierDao supplierDao;
     @Override
     public Supplier addSupplier(Supplier supplier) {
+
         supplierDao.addSupplier(supplier);
         return supplier;
     }
