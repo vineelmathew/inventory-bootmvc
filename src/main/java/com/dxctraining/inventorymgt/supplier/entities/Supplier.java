@@ -10,9 +10,8 @@ public class Supplier {
     @Id
     @GeneratedValue
     private int id;
-    public Supplier(String name,int id) {
+    public Supplier(String name) {
         this.name = name;
-        this.id=id;
     }
     public Supplier() {
 

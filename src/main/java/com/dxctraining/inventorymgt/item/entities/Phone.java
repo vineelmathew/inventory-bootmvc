@@ -2,6 +2,9 @@ package com.dxctraining.inventorymgt.item.entities;
 
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Phone extends Item {
     private int storageSize;
     public Phone(String name, Supplier supplier, int storageSize) {

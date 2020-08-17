@@ -23,13 +23,10 @@ private IItemService iItemService;
     public void runApp() {
         try {
             //SUPPLIERS
-            Supplier supplier1 = new Supplier("a1 suppliers", 1);
-            Supplier supplier2 = new Supplier("a2 suppliers", 2);
+            Supplier supplier1 = new Supplier("a1suppliers");
+            Supplier supplier2 = new Supplier("a2 suppliers");
             supplierService.addSupplier(supplier1);
             supplierService.addSupplier(supplier2);
-             int id1=supplier1.getId();
-            Supplier su1=supplierService.findById(id1);
-            System.out.println(su1.getId()+"  "+su1.getName());
            //ITEMS VALUES
             Phone item1=new Phone("nokia",supplier1,20);
             Phone item2=new Phone("samsung",supplier2,40);
@@ -39,9 +36,6 @@ private IItemService iItemService;
             iItemService.addItem(item2);
             iItemService.addItem(item3);
             iItemService.addItem(item4);
-            int id2=item1.getId();
-            Item it=iItemService.findById(id2);
-            System.out.println(it.getName()+"   "+it.getId());
         } catch (InvalidArgumentException e) {
             e.printStackTrace();
         }

@@ -2,6 +2,9 @@ package com.dxctraining.inventorymgt.item.entities;
 
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Computer extends Item {
     private int diskSize;
     public Computer(String name, Supplier supplier, int diskSize) {
