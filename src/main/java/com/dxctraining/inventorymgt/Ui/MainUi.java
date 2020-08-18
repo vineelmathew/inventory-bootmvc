@@ -17,11 +17,12 @@ import java.util.List;
 public class MainUi {
     @Autowired
     private ISupplierService supplierService;
-@Autowired
-private IItemService iItemService;
+    @Autowired
+    private IItemService iItemService;
+
     @PostConstruct
     public void runApp() {
-        try {
+        /*try {
             //SUPPLIERS
             Supplier supplier1 = new Supplier("a1suppliers");
             Supplier supplier2 = new Supplier("a2 suppliers");
@@ -41,5 +42,8 @@ private IItemService iItemService;
         }
 
 
+    }
+
+         */
     }
 }
