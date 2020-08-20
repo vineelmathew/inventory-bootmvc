@@ -1,17 +1,11 @@
 package com.dxctraining.inventorymgt.Ui;
 
-import com.dxctraining.inventorymgt.item.entities.Computer;
-import com.dxctraining.inventorymgt.item.entities.Item;
-import com.dxctraining.inventorymgt.item.entities.Phone;
 import com.dxctraining.inventorymgt.item.services.IItemService;
-import com.dxctraining.inventorymgt.supplier.entities.Supplier;
-import com.dxctraining.inventorymgt.supplier.exceptions.InvalidArgumentException;
 import com.dxctraining.inventorymgt.supplier.services.ISupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
 
 @Component
 public class MainUi {
@@ -40,10 +34,9 @@ public class MainUi {
         } catch (InvalidArgumentException e) {
             e.printStackTrace();
         }
+        */
 
 
     }
-
-         */
     }
-}
+

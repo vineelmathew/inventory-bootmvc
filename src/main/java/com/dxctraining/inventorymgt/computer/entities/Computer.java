@@ -1,5 +1,6 @@
-package com.dxctraining.inventorymgt.item.entities;
+package com.dxctraining.inventorymgt.computer.entities;
 
+import com.dxctraining.inventorymgt.item.entities.Item;
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 
 import javax.persistence.Entity;

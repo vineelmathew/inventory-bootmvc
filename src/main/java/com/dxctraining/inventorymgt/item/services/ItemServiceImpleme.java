@@ -2,10 +2,7 @@ package com.dxctraining.inventorymgt.item.services;
 
 import com.dxctraining.inventorymgt.item.dao.IItemDao;
 import com.dxctraining.inventorymgt.item.entities.Item;
-import com.dxctraining.inventorymgt.supplier.Dao.ISupplierDao;
-import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,4 +34,35 @@ public class ItemServiceImpleme implements IItemService{
         List<Item>result=itemDao.itemList();
         return result;
     }
+
+    /*@Override
+    public List<Item> phoneList() {
+        List<Item>phones=itemDao.itemList();
+        List<Item>phoneslist=null;
+        for(Item item:phones)
+        {
+            Boolean isPhone=phones instanceof Phone;
+            if(isPhone)
+            {
+                   phoneslist.add((Item) phones);
+            }
+        }
+        return phoneslist;
+    }*/
+
+
+    /*@Override
+    public List<Item> computerList() {
+        List<Item>itemList=itemDao.itemList();
+        List<Item>computerlist=null;
+        for(Item item:itemList)
+        {
+            Boolean isCom=item instanceof Computer;
+            if(isCom)
+            {
+                computerlist.add((Item) itemList);
+            }
+        }
+        return computerlist;
+    }*/
 }

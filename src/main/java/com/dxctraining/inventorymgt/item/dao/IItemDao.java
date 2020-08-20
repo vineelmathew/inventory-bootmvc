@@ -9,5 +9,6 @@ public interface IItemDao {
  public void removeItem(int id);
  public Item findById(int id);
  public List<Item> itemList();
-
+ //public List<Item> phoneList();
+ //public List<Item> computerList();
 }
