@@ -8,6 +8,7 @@
 *.elf
 *.iml
 *.idea
+target
 
 
 # Linker output

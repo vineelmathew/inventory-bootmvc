@@ -10,14 +10,17 @@ public class Supplier {
     @Id
     @GeneratedValue
     private int id;
-    public Supplier(String name) {
+    private String name;
+    private String password;
+    public Supplier(String name,String password) {
         this.name = name;
+        this.password=password;
     }
     public Supplier() {
 
     }
 
-    private String name;
+
     public int getId() {
         return id;
     }
@@ -32,6 +35,14 @@ public class Supplier {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

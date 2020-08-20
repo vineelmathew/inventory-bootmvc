@@ -37,4 +37,6 @@ public class SupplierDaoImplem implements ISupplierDao {
         Supplier supplier=entityManager.find(Supplier.class,id);
         return  supplier;
     }
+
+
 }

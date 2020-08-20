@@ -36,15 +36,15 @@ public class ItemServiceImpleme implements IItemService{
     }
 
     /*@Override
-    public List<Item> phoneList() {
+    public List<Phone> phoneList() {
         List<Item>phones=itemDao.itemList();
-        List<Item>phoneslist=null;
+        List<Phone>phoneslist=null;
         for(Item item:phones)
         {
-            Boolean isPhone=phones instanceof Phone;
+            Boolean isPhone=item instanceof Phone;
             if(isPhone)
             {
-                   phoneslist.add((Item) phones);
+                   phoneslist.add((Phone) item);
             }
         }
         return phoneslist;
@@ -52,15 +52,15 @@ public class ItemServiceImpleme implements IItemService{
 
 
     /*@Override
-    public List<Item> computerList() {
+    public List<Computer> computerList() {
         List<Item>itemList=itemDao.itemList();
-        List<Item>computerlist=null;
+        List<Computer>computerlist=null;
         for(Item item:itemList)
         {
             Boolean isCom=item instanceof Computer;
             if(isCom)
             {
-                computerlist.add((Item) itemList);
+                computerlist.add((Computer)item);
             }
         }
         return computerlist;

@@ -9,4 +9,5 @@ public interface ISupplierService {
     public void removeSupplier(int id);
     public List<Supplier> supplierList();
     public Supplier findById(int id);
+     boolean authenticate(int id,String password);
 }

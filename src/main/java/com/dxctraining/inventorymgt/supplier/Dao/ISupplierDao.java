@@ -9,4 +9,5 @@ public Supplier addSupplier(Supplier supplier);
 public void removeSupplier(int id);
 public List<Supplier> supplierList();
 public Supplier findById(int id);
+
 }

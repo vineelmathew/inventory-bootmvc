@@ -32,8 +32,8 @@ public class InventoryController {
     public void run()
     {
         //Suppliers
-        Supplier supplier1 = new Supplier("a1suppliers");
-        Supplier supplier2 = new Supplier("a2 suppliers");
+        Supplier supplier1 = new Supplier("a1suppliers","123");
+        Supplier supplier2 = new Supplier("a2 suppliers","1234");
 
         supplierservice.addSupplier(supplier1);
         supplierservice.addSupplier(supplier2);
@@ -88,6 +88,7 @@ public class InventoryController {
         ModelAndView modelAndView=new ModelAndView("phonelist","phones",phonelist);
         return modelAndView;
     }
+
 
 
 

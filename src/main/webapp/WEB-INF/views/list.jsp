@@ -14,13 +14,17 @@
  <tr>
     <th>ID</th>
     <th>SUPPLIERS NAME</th>
+    <th>SUPPLIER PASSWORD</th>
   </tr>
 <v:forEach items="${suppliers}" var="supplier">
 
 <tr align="center">
     <td><v:out value="${supplier.id}"/></td>
     <td><v:out value="${supplier.name}"/></td>
+    <td><v:out value="${supplier.password}"/></td>
+
 </v:forEach>
   </tr>
+<a href="/logout"> Logout </a>
 </table>
 </html>

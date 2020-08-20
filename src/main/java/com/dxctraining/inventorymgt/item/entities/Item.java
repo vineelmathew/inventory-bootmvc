@@ -14,14 +14,16 @@ public class Item {
     private String name;
     @ManyToOne
     private Supplier supplier;
-    public Item( String name, Supplier supplier) {
+
+    public Item(String name, Supplier supplier) {
         this.name = name;
         this.supplier = supplier;
     }
-    public Item()
-    {
+
+    public Item() {
 
     }
+
     public int getId() {
         return id;
     }
@@ -58,4 +60,7 @@ public class Item {
     public int hashCode() {
         return id;
     }
+
+
 }
+

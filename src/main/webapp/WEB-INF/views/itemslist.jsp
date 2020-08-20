@@ -6,24 +6,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SUPPLIERS LIST</title>
+<title>ITEMS LIST</title>
 </head>
 <body>
-<h1 align="center">PHONES LIST</h1>
+<h1 align="center">ITEMS LIST</h1>
 <table border="5px solid black" width="50%">
  <tr>
     <th>ID</th>
-    <th>PHONE NAME</th>
-    <th>STORAGE SIZE</th>
+    <th>ITEM NAME</th>
+    <th>SUPPLIER ID</th>
   </tr>
-<v:forEach items="${phones}" var="phone">
-
+<v:forEach items="${items}" var="item">
 <tr align="center">
-    <td><v:out value="${phone.id}"/></td>
-    <td><v:out value="${phone.name}"/></td>
-    <td><v:out value="${phone.storageSize}"/><span>GB</span></td>
-
-
+    <td><v:out value="${item.id}"/></td>
+    <td><v:out value="${item.name}"/></td>
+    <td><v:out value="${item.supplier.id}"/></td>
 </v:forEach>
   </tr>
 </table>

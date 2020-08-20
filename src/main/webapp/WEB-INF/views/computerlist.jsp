@@ -21,9 +21,7 @@
 <tr align="center">
     <td><v:out value="${computer.id}"/></td>
     <td><v:out value="${computer.name}"/></td>
-    <td><v:out value="${computer.diskSize}"/></td>
-
-
+    <td><v:out value="${computer.diskSize}"/><span>GB</span></td>
 </v:forEach>
   </tr>
 </table>

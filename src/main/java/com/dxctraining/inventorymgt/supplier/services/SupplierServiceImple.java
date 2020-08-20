@@ -14,7 +14,6 @@ public class SupplierServiceImple implements ISupplierService {
     private ISupplierDao supplierDao;
     @Override
     public Supplier addSupplier(Supplier supplier) {
-
         supplierDao.addSupplier(supplier);
         return supplier;
     }
@@ -27,10 +26,17 @@ public class SupplierServiceImple implements ISupplierService {
         List<Supplier>result=supplierDao.supplierList();
         return result;
     }
-
+    @Override
+    public boolean authenticate(int id, String password) {
+        Supplier supplier=supplierDao.findById(id);
+        String supplierpwd=supplier.getPassword();
+        return password.equals(supplierpwd);
+    }
     @Override
     public Supplier findById(int id) {
        Supplier supplier=supplierDao.findById(id);
        return supplier;
     }
+
+
 }
