@@ -16,6 +16,11 @@ public class Computer extends Item {
     {
 
     }
+   public Computer(String name,int diskSize)
+   {
+       this(name,null,diskSize);
+   }
+
     public int getDiskSize() {
         return diskSize;
     }

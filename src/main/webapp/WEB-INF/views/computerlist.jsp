@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SUPPLIERS LIST</title>
 </head>
 <body>
 <h1 align="center">COMPUTERS LIST</h1>

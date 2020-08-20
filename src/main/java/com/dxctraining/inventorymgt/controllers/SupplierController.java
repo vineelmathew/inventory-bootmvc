@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Controller
@@ -21,6 +22,15 @@ public class SupplierController {
     private SessionMaintain sessionData;
     @Autowired
     private IItemService iItemService;
+    @PostConstruct
+    public void run() {
+        //Suppliers
+        Supplier supplier1 = new Supplier("a1suppliers", "123");
+        Supplier supplier2 = new Supplier("a2 suppliers", "1234");
+        supplierService.addSupplier(supplier1);
+        supplierService.addSupplier(supplier2);
+
+    }
 
   @GetMapping("/addsupplier")
   public ModelAndView addSupplier()

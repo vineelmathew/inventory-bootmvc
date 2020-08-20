@@ -21,6 +21,8 @@ C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\ite
 C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\supplier\services\SupplierServiceImple.java
 C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\item\services\ItemServiceImpleme.java
 C:\java training\inventory-spring\src\main\java\com\dxctraining\ProjectMain.java
+C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\controllers\PhoneController.java
+C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\controllers\ComputerController.java
 C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\phone\entities\Phone.java
 C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\phone\services\IPhoneService.java
 C:\java training\inventory-spring\src\main\java\com\dxctraining\inventorymgt\controllers\InventoryController.java
