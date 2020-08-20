@@ -15,6 +15,10 @@ private int StorageSize;
     public Phone()
 {
 }
+public Phone(String name,int storageSize)
+{
+    this(name,null,storageSize);
+}
     public int getStorageSize() {
         return StorageSize;
     }
