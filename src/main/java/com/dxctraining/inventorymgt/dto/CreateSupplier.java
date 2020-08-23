@@ -9,6 +9,10 @@ public class CreateSupplier {
         this.password = password;
     }
 
+    public CreateSupplier() {
+
+    }
+
 
     public String getPassword() {
         return password;

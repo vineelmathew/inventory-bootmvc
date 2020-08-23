@@ -43,9 +43,8 @@ public class SupplierController {
   {
       Supplier supplier=new Supplier(name,password);
       supplier=supplierService.addSupplier(supplier);
-      List<Supplier>supplierList=supplierService.supplierList();
-      System.out.println("inside suppliers list");
-      ModelAndView modelAndView=new ModelAndView("list","suppliers",supplierList);
+      System.out.println("inside process suppliers list");
+      ModelAndView modelAndView=new ModelAndView("info","suppliers",supplier);
       return  modelAndView;
   }
 
@@ -60,8 +59,7 @@ public class SupplierController {
         }
         sessionData.saveLogin(id);
         Supplier supplier=supplierService.findById(id);
-        List<Supplier>supplierList=supplierService.supplierList();
-        ModelAndView modelAndView=new ModelAndView("list","suppliers",supplierList);
+        ModelAndView modelAndView=new ModelAndView("info","suppliers",supplier);
         return  modelAndView;
     }
 
@@ -73,7 +71,7 @@ public class SupplierController {
         }
         Supplier supplier=supplierService.findById(id);
         List<Supplier>supplierList=supplierService.supplierList();
-        ModelAndView modelAndView=new ModelAndView("list","items",supplier);
+        ModelAndView modelAndView=new ModelAndView("list","suppliers",supplier);
         return modelAndView;
     }
 
@@ -103,30 +101,20 @@ public class SupplierController {
         ModelAndView modelAndView=new ModelAndView("itemslist","items",itemslist);
         return modelAndView;
     }
-
-
-    @PostMapping("/postsupplierregister")
-    public ModelAndView postSupplierRegister(@RequestParam("name") String name,@RequestParam("password")
-                                             String password)
+    @GetMapping("/postaddsupplier")
+    public ModelAndView postRegisterPage(){
+        CreateSupplier supplierData=new CreateSupplier();
+        ModelAndView modelView=new ModelAndView("addpostsupplier","supplier",supplierData);
+        return modelView;
+    }
+    @PostMapping("/processpostsupplier")
+    public ModelAndView addPostSupplier(@ModelAttribute("supplier") CreateSupplier data)
     {
+        String name= data.getName();
+        String password=data.getPassword();
         Supplier supplier=new Supplier(name,password);
-        supplierService.addSupplier(supplier);
-        List<Supplier>supplierList=supplierService.supplierList();
-        ModelAndView modelAndView=new ModelAndView("list","items",supplier);
+        supplier=supplierService.addSupplier(supplier);
+        ModelAndView modelAndView=new ModelAndView("info","suppliers",supplier);
         return modelAndView;
     }
-
-    @GetMapping("/register")
-    public ModelAndView registerPage(){
-        System.out.println("inside register post method");
-        ModelAndView mv=new ModelAndView("supplierregister");
-        return mv;
-    }
-
-
-
-
-
-
-
 }
