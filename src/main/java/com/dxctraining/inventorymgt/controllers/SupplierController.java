@@ -70,8 +70,7 @@ public class SupplierController {
             return new ModelAndView("login");
         }
         Supplier supplier=supplierService.findById(id);
-        List<Supplier>supplierList=supplierService.supplierList();
-        ModelAndView modelAndView=new ModelAndView("list","suppliers",supplier);
+        ModelAndView modelAndView=new ModelAndView("info","suppliers",supplier);
         return modelAndView;
     }
 
